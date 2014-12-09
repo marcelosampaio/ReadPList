@@ -14,6 +14,8 @@
 		9C281E6C1A37712B00CC9DF1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C281E6B1A37712B00CC9DF1 /* Images.xcassets */; };
 		9C281E6F1A37712B00CC9DF1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C281E6D1A37712B00CC9DF1 /* LaunchScreen.xib */; };
 		9C281E7B1A37712C00CC9DF1 /* ReadPListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C281E7A1A37712C00CC9DF1 /* ReadPListTests.m */; };
+		9C281E8A1A3771E700CC9DF1 /* PListReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C281E891A3771E700CC9DF1 /* PListReader.m */; };
+		9C281E8C1A37728600CC9DF1 /* Reader.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C281E8B1A37728600CC9DF1 /* Reader.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		9C281E741A37712B00CC9DF1 /* ReadPListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReadPListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C281E791A37712B00CC9DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C281E7A1A37712C00CC9DF1 /* ReadPListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReadPListTests.m; sourceTree = "<group>"; };
+		9C281E881A3771E700CC9DF1 /* PListReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PListReader.h; sourceTree = "<group>"; };
+		9C281E891A3771E700CC9DF1 /* PListReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PListReader.m; sourceTree = "<group>"; };
+		9C281E8B1A37728600CC9DF1 /* Reader.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Reader.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,13 +86,11 @@
 		9C281E5D1A37712900CC9DF1 /* ReadPList */ = {
 			isa = PBXGroup;
 			children = (
-				9C281E621A37712900CC9DF1 /* AppDelegate.h */,
-				9C281E631A37712A00CC9DF1 /* AppDelegate.m */,
-				9C281E651A37712A00CC9DF1 /* ViewController.h */,
-				9C281E661A37712A00CC9DF1 /* ViewController.m */,
-				9C281E681A37712A00CC9DF1 /* Main.storyboard */,
+				9C281E871A3771C700CC9DF1 /* Classes */,
+				9C281E861A3771B200CC9DF1 /* User Interface */,
+				9C281E851A3771A400CC9DF1 /* Controllers */,
+				9C281E841A37719400CC9DF1 /* Root */,
 				9C281E6B1A37712B00CC9DF1 /* Images.xcassets */,
-				9C281E6D1A37712B00CC9DF1 /* LaunchScreen.xib */,
 				9C281E5E1A37712900CC9DF1 /* Supporting Files */,
 			);
 			path = ReadPList;
@@ -98,6 +101,7 @@
 			children = (
 				9C281E5F1A37712900CC9DF1 /* Info.plist */,
 				9C281E601A37712900CC9DF1 /* main.m */,
+				9C281E8B1A37728600CC9DF1 /* Reader.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -117,6 +121,42 @@
 				9C281E791A37712B00CC9DF1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C281E841A37719400CC9DF1 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				9C281E621A37712900CC9DF1 /* AppDelegate.h */,
+				9C281E631A37712A00CC9DF1 /* AppDelegate.m */,
+			);
+			name = Root;
+			sourceTree = "<group>";
+		};
+		9C281E851A3771A400CC9DF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9C281E651A37712A00CC9DF1 /* ViewController.h */,
+				9C281E661A37712A00CC9DF1 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		9C281E861A3771B200CC9DF1 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				9C281E681A37712A00CC9DF1 /* Main.storyboard */,
+				9C281E6D1A37712B00CC9DF1 /* LaunchScreen.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		9C281E871A3771C700CC9DF1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C281E881A3771E700CC9DF1 /* PListReader.h */,
+				9C281E891A3771E700CC9DF1 /* PListReader.m */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C281E6A1A37712A00CC9DF1 /* Main.storyboard in Resources */,
+				9C281E8C1A37728600CC9DF1 /* Reader.plist in Resources */,
 				9C281E6F1A37712B00CC9DF1 /* LaunchScreen.xib in Resources */,
 				9C281E6C1A37712B00CC9DF1 /* Images.xcassets in Resources */,
 			);
@@ -222,6 +263,7 @@
 				9C281E671A37712A00CC9DF1 /* ViewController.m in Sources */,
 				9C281E641A37712A00CC9DF1 /* AppDelegate.m in Sources */,
 				9C281E611A37712900CC9DF1 /* main.m in Sources */,
+				9C281E8A1A3771E700CC9DF1 /* PListReader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

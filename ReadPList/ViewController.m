@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PListReader.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Show Parameter1 Value
+
+    NSLog(@"Parameter 1: %@",[PListReader valueInPlistForKey:@"Parameter1"]);
+    NSLog(@"Parameter 2: %@",[PListReader valueInPlistForKey:@"Parameter2"]);
+    
 }
 
 - (void)didReceiveMemoryWarning {
